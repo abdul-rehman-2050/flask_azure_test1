@@ -23,6 +23,7 @@ def favicon():
 @app.route('/hello', methods=['POST'])
 def hello():
    name = request.form.get('name')
+   opencv_version = cv2.__version__
 
    if name:
        print('Request for hello page received with name=%s' % name)
